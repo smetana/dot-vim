@@ -56,14 +56,13 @@ autocmd BufNewFile,BufRead  *.html set ts=2 sw=2
 " force plugins to load correctly. Turned back on below
 filetype off
 
-" Load plugins here (pathogen or vundle)
+" Load plugins here
 call plug#begin('~/.vim/.bundle')
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/dbext.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 call plug#end()
-" Load plugins end
 
 syntax on
 filetype plugin indent on " activate plugin and indent files by default
@@ -121,7 +120,7 @@ map <S-F8> :emenu SetFileEncoding.<Tab>
 map <F9> :set spell<CR>
 map <C-F9> :set nospell<CR>
 
-" Highlight trailing spaces
+" highlight trailing spaces
 match IncSearch /\s\+$/
 
 " project configs
