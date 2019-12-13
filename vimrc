@@ -60,6 +60,8 @@ filetype off
 call plug#begin('~/.vim/.bundle')
 Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/dbext.vim'
+Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go'
 call plug#end()
 " Load plugins end
 
