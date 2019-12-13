@@ -1,6 +1,3 @@
-I keep my ~/.vim directory with ~/.vim/vimrc here
+# ~/.vim
 
-```
-# to install plugins
-:PlugInstall
-```
+My vim setup. This repository does not include project-specific `.vimrc` files
