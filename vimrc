@@ -59,6 +59,7 @@ filetype off
 " Load plugins here (pathogen or vundle)
 call plug#begin('~/.vim/.bundle')
 Plug 'jlanzarotta/bufexplorer'
+Plug 'vim-scripts/dbext.vim'
 call plug#end()
 " Load plugins end
 
@@ -117,3 +118,11 @@ map <S-F8> :emenu SetFileEncoding.<Tab>
 
 map <F9> :set spell<CR>
 map <C-F9> :set nospell<CR>
+
+" Highlight trailing spaces
+match IncSearch /\s\+$/
+
+"database connections
+"let g:dbext_default_profile_psql = 'type=PGSQL'
+let g:dbext_default_profile_psql = 'type=PGSQL:dbname=results_eta'
+let g:dbext_default_profile = 'psql'
