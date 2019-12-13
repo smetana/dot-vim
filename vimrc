@@ -122,7 +122,6 @@ map <C-F9> :set nospell<CR>
 " Highlight trailing spaces
 match IncSearch /\s\+$/
 
-"database connections
-"let g:dbext_default_profile_psql = 'type=PGSQL'
-let g:dbext_default_profile_psql = 'type=PGSQL:dbname=results_eta'
-let g:dbext_default_profile = 'psql'
+" project configs
+source ~/projects/data/.vimrc
+source ~/projects/results-eta/.vimrc
