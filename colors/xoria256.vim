@@ -3,6 +3,7 @@
 " Name:         xoria256.vim
 " Version:      1.7
 " Maintainer:   Dmitriy Y. Zotikov (xio) <xio@ungrund.org>
+" https://www.vim.org/scripts/script.php?script_id=2140
 "
 " Should work in recent 256 color terminals.  88-color terms like urxvt are
 " NOT supported.
@@ -61,11 +62,11 @@ hi ErrorMsg     ctermfg=15  guifg=#ffffff ctermbg=1   guibg=#800000
 hi FoldColumn   ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi Folded       ctermfg=255 guifg=#eeeeee ctermbg=60  guibg=#5f5f87
 hi IncSearch    ctermfg=0   guifg=#000000 ctermbg=223 guibg=#ffdfaf cterm=none gui=none
-hi LineNr       ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212
+hi LineNr       ctermfg=239 guifg=#9e9e9e ctermbg=233 guibg=#121212
 hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold gui=bold
 " TODO
 " hi MoreMsg
-hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=233 guibg=#121212 cterm=bold gui=bold
+hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=234 guibg=#121212 cterm=bold gui=bold
 hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
 hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
 hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
@@ -104,6 +105,12 @@ hi PreProc      ctermfg=150 guifg=#afdf87
 hi Special      ctermfg=174 guifg=#df8787
 hi Statement    ctermfg=110 guifg=#87afdf                           cterm=none gui=none
 hi Type         ctermfg=146 guifg=#afafdf                           cterm=none gui=none
+hi String       ctermfg=114
+"hi Define
+"hi Function
+"hi SpecialKey
+
+
 
 "" Special {{{2
 """ .diff {{{3
