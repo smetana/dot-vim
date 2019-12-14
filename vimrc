@@ -126,6 +126,9 @@ match IncSearch /\s\+$/
 " keep selection after indenting
 vnoremap > >gv
 vnoremap < <gv
+" indent one space left/right
+vnoremap . :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv>:set sw<<CR>gv
+vnoremap , :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv<:set sw<<CR>gv
 
 " project configs
 source ~/projects/data/.vimrc
