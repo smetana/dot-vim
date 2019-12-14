@@ -80,7 +80,7 @@ imap <C-t> <C-R>=strftime('%H:%M:%S')<CR>
 " visualize tabs and newlines. Use "set list" to activate
 set listchars=tab:▸\ ,eol:¬
 
-colorscheme xoria256
+colorscheme my-xoria256
 
 map <C-o> :e.<CR>
 map <A-DOWN> :bn<CR>

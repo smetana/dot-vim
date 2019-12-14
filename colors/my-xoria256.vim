@@ -1,9 +1,11 @@
+" Forked from xoria256
+" https://www.vim.org/scripts/script.php?script_id=2140
+"
 " Vim color file
 "
-" Name:         xoria256.vim
+" Name:         my-xoria256.vim
 " Version:      1.7
 " Maintainer:   Dmitriy Y. Zotikov (xio) <xio@ungrund.org>
-" https://www.vim.org/scripts/script.php?script_id=2140
 "
 " Should work in recent 256 color terminals.  88-color terms like urxvt are
 " NOT supported.
@@ -48,7 +50,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "xoria256"
+let colors_name = "my-xoria256"
 "}}}
 " Colours {{{1
 "" General {{{2
@@ -67,9 +69,9 @@ hi MatchParen   ctermfg=188 guifg=#dfdfdf ctermbg=68  guibg=#5f87df cterm=bold g
 " TODO
 " hi MoreMsg
 hi NonText      ctermfg=247 guifg=#9e9e9e ctermbg=234 guibg=#121212 cterm=bold gui=bold
-hi Pmenu        ctermfg=0   guifg=#000000 ctermbg=250 guibg=#bcbcbc
-hi PmenuSel     ctermfg=255 guifg=#eeeeee ctermbg=243 guibg=#767676
-hi PmenuSbar                              ctermbg=252 guibg=#d0d0d0
+hi Pmenu        ctermfg=245 guifg=#8a8a8a ctermbg=237 guibg=#3a3a3a
+hi PmenuSel     ctermfg=252 guifg=#eeeeee ctermbg=240 guibg=#767676
+hi PmenuSbar                              ctermbg=249 guibg=#d0d0d0
 hi PmenuThumb   ctermfg=243 guifg=#767676
 hi Search       ctermfg=0   guifg=#000000 ctermbg=149 guibg=#afdf5f
 hi SignColumn   ctermfg=248 guifg=#a8a8a8
