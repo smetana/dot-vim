@@ -25,7 +25,7 @@ set statusline=%<%f%h%m%r%=%b\ 0x%B\ %l,%c%V\ format=%{&fileformat}\ file=%{&fil
 set incsearch " do incremental search
 set hlsearch " highlight all search matches
 set ignorecase " case insensitive search
-" clear search highlight on redraw screem
+" clear search highlight on redraw screen
 nnoremap <C-L> :nohl<CR><C-L>
 
 set clipboard=unnamedplus " use global clipboard
@@ -62,7 +62,13 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'vim-scripts/dbext.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
+
+" code completion
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
 call plug#end()
+let g:deoplete#enable_at_startup = 1
 
 syntax on
 filetype plugin indent on " activate plugin and indent files by default
@@ -129,6 +135,9 @@ vnoremap < <gv
 " indent one space left/right
 vnoremap . :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv>:set sw<<CR>gv
 vnoremap , :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv<:set sw<<CR>gv
+
+"code completion on Tab
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " project configs
 source ~/projects/data/.vimrc
