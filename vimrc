@@ -123,6 +123,10 @@ map <C-F9> :set nospell<CR>
 " highlight trailing spaces
 match IncSearch /\s\+$/
 
+" keep selection after indenting
+vnoremap > >gv
+vnoremap < <gv
+
 " project configs
 source ~/projects/data/.vimrc
 source ~/projects/results-eta/.vimrc
