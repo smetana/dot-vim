@@ -95,7 +95,7 @@ map <C-t> :tabe<CR>
 map <C-LEFT> :tabp<CR>
 map <C-RIGHT> :tabn<CR>
 
-map \| :vsp<CR>
+nnoremap \| :vsp<CR>
 map <A-RIGHT> <C-W><RIGHT>
 map <A-LEFT> <C-W><LEFT>
 
