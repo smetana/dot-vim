@@ -152,6 +152,7 @@ nnoremap <Leader>/ :Rg<space>
 
 "git client
 nnoremap <Leader>ta :Tig --all<CR>
+nnoremap <Leader>t<CR> :Tig --all<CR>
 nnoremap <Leader>tb :TigBlame<CR>
 nnoremap <Leader>tf :TigOpenCurrentFile<CR>
 nnoremap <Leader>tg :TigGrep<CR>
