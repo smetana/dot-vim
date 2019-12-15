@@ -40,7 +40,7 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 set guifont=Iosevka\ Term\ SS04\ Semibold\ 15
 
-" expand all table except for .go files
+" expand tabs everywhere except .go files
 set expandtab
 autocmd BufNewFile,BufRead  *.go set noexpandtab
 
