@@ -67,6 +67,10 @@ Plug 'fatih/vim-go'
 Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
+
+" navigation and search
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'jremmen/vim-ripgrep'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 
@@ -83,8 +87,8 @@ set listchars=tab:▸\ ,eol:¬
 colorscheme my-xoria256
 
 map <C-o> :e.<CR>
-map <A-DOWN> :bn<CR>
-map <A-UP> :bp<CR>
+map <A-RIGHT> :bn<CR>
+map <A-LEFT> :bp<CR>
 
 " gnome terminal has its own tabs with the same shortcuts
 map <C-t> :tabe<CR>
@@ -96,10 +100,10 @@ map <A-RIGHT> <C-W><RIGHT>
 map <A-LEFT> <C-W><LEFT>
 
 " resize windows
-map <A-S-LEFT> <C-W><
-map <A-S-RIGHT> <C-W>>
-map <A-S-UP> <C-W>+
-map <A-S-DOWN> <C-W>-
+map <C-S-RIGHT> <C-W>>
+map <C-S-LEFT> <C-W><
+map <C-S-DOWN> <C-W>+
+map <C-S-UP> <C-W>-
 
 map <F1> \be
 map <F2> :w<CR>
@@ -138,6 +142,9 @@ vnoremap , :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv<:set sw<<CR>gv
 
 "code completion on Tab
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+set grepprg=rg\ --vimgrep
+
+nnoremap <Leader>/ :Rg<space>
 
 " project configs
 source ~/projects/data/.vimrc
