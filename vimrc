@@ -71,6 +71,9 @@ Plug 'roxma/vim-hug-neovim-rpc'
 " navigation and search
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jremmen/vim-ripgrep'
+
+" git client
+Plug 'iberianpig/tig-explorer.vim'
 call plug#end()
 let g:deoplete#enable_at_startup = 1
 
@@ -144,7 +147,15 @@ vnoremap , :<BS><BS><BS><BS><BS>setlocal sw=1<CR>gv<:set sw<<CR>gv
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 set grepprg=rg\ --vimgrep
 
+"ripgrep in quickfix window
 nnoremap <Leader>/ :Rg<space>
+
+"git client
+nnoremap <Leader>ta :Tig --all<CR>
+nnoremap <Leader>tb :TigBlame<CR>
+nnoremap <Leader>tf :TigOpenCurrentFile<CR>
+nnoremap <Leader>tg :TigGrep<CR>
+
 
 " project configs
 source ~/projects/data/.vimrc
