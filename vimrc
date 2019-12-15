@@ -158,6 +158,9 @@ nnoremap <Leader>tb :TigBlame<CR>
 nnoremap <Leader>tf :TigOpenCurrentFile<CR>
 nnoremap <Leader>tg :TigGrep<CR>
 
+"terminal
+set splitbelow
+tnoremap <C-\><ESC> <C-\><C-N>
 
 " project configs
 source ~/projects/data/.vimrc
