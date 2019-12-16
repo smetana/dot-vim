@@ -29,10 +29,10 @@ color   main-head               213     default     bold
 color   graph-commit            226     default
 
 # Diff   colors
-color   diff_add                10      default
-color   diff_add2               10      default
-color   diff_del                196     default
-color   diff_del2               196     default
+color   "-"                     1       default
+color   " -"                    1       default
+color   "+"                     77      default
+color   " +"                    77      default
 color   diff-header             221     default
 color   diff-index              110     default
 color   diff-chunk              213     default
@@ -41,7 +41,8 @@ color   diff_newmode            221     default
 color   "diff --"               229     default
 color   "--- "                  180     default
 color   "+++ "                  180     default
-color   "@@"                    182     default
+color   "@@"                    110     default
+color   diff-stat               244     default
 color   'deleted file mode'     221     default
 color   'copy from'             223     default
 color   'copy to'               221     default
@@ -50,7 +51,6 @@ color   'rename to'             221     default
 color   diff_similarity         221     default
 color   'dissimilarity'         221     default
 color   'diff_tree'             110     default
-color   diff-stat               110     default
 color   "Reported-by: "         156     default
 
 color   'Author: '              245     default
