@@ -1,5 +1,5 @@
-export HISTSIZE=
-export HISTFILESIZE=
+export HISTSIZE=-1
+export HISTFILESIZE=-1
 export PAGER="less"
 export EDITOR="vim"
 
