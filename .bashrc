@@ -25,7 +25,7 @@ export GO111MODULE=on
 unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"
 hostC='\h'; hostC="\[\e[1;38;5;180m\]$hostC\[\e[0m\]"
 pathC='\w'; pathC="\[\e[1;38;5;229m\]$pathC\[\e[0m\]"
-timeC='\t'; timeC="\[\e[1;38;5;240;48;5;234m\]$timeC\[\e[0m\]"
+timeC='\t'; timeC="\[\e[1;38;5;240;48;5;0m\]$timeC\[\e[0m\]"
 
 if [ `id -un` != 'root' ]; then
   sep1="\[\e[1;37m\]@\[\e[0m\]"

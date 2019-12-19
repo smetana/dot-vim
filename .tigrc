@@ -7,7 +7,7 @@ bind    diff    D   !git difftool --tool=vimdiff --no-prompt %(commit)^! -- %(fi
 # COLORS
 
 # general
-color   default                 252     234
+color   default                 252     0
 color   cursor                  15      237
 color   title-focus             249     239
 color   title-blur              249     238
