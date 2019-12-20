@@ -22,6 +22,12 @@ set laststatus=2 " always display the status line
 set statusline=%<%f%h%m%r%=%b\ 0x%B\ %l,%c%V\ format=%{&fileformat}\ file=%{&fileencoding}\ enc=%{&encoding}\ %P
 " set cmdheight=2 " set the command window height to 2 lines
 
+" ask tmux for an extended mouse reporting mode
+" this allows to resize split windows with mouse in tmux
+if &term =~ '^screen'
+  set ttymouse=xterm2
+endif
+
 set incsearch " do incremental search
 set hlsearch " highlight all search matches
 set ignorecase " case insensitive search
