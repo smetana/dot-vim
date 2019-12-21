@@ -44,7 +44,7 @@ vnoremap d "xd
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-set guifont=Iosevka\ Term\ SS04\ Semibold\ 15
+set guifont=Terminus\ Bold\ 14
 
 " expand tabs everywhere except .go files
 set expandtab
