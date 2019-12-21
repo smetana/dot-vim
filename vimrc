@@ -180,7 +180,7 @@ set splitbelow
 tnoremap <C-\><ESC> <C-\><C-N>
 
 " project configs
-if ! has("win32")
+if hostname() == "x99"
   source ~/projects/data/.vimrc
   source ~/projects/results-eta/.vimrc
-end
+endif
