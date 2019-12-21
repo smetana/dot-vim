@@ -44,7 +44,12 @@ vnoremap d "xd
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-set guifont=Terminus\ Bold\ 14
+
+if has("win32")
+  set guifont=Terminus:h14:b:cRUSSIAN:qDRAFT
+else
+  set guifont=Terminus\ Bold\ 14
+endif
 
 " expand tabs everywhere except .go files
 set expandtab
@@ -93,7 +98,13 @@ imap <C-t> <C-R>=strftime('%H:%M:%S')<CR>
 " visualize tabs and newlines. Use "set list" to activate
 set listchars=tab:▸\ ,eol:¬
 
-colorscheme my-xoria256
+if has("win32") && ! has("gui_running")
+  colorscheme xoria16win
+elseif &t_Co != 256 && ! has("gui_running")
+  colorscheme xoria16
+else
+  colorscheme my-xoria256
+endif
 
 map <C-o> :e.<CR>
 map <A-RIGHT> :bn<CR>
@@ -169,5 +180,7 @@ set splitbelow
 tnoremap <C-\><ESC> <C-\><C-N>
 
 " project configs
-source ~/projects/data/.vimrc
-source ~/projects/results-eta/.vimrc
+if ! has("win32")
+  source ~/projects/data/.vimrc
+  source ~/projects/results-eta/.vimrc
+end
