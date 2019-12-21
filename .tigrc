@@ -31,8 +31,8 @@ color   graph-commit            226     default
 # Diff   colors
 color   "-"                     1       default
 color   " -"                    1       default
-color   "+"                     77      default
-color   " +"                    77      default
+color   "+"                     114      default
+color   " +"                    114      default
 color   diff-header             221     default
 color   diff-index              110     default
 color   diff-chunk              213     default
