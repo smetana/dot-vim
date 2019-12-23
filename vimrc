@@ -167,6 +167,7 @@ set grepprg=rg\ --vimgrep
 "ripgrep in quickfix window
 nnoremap <Leader>/ :Rg<space>
 nnoremap <Leader>rg :Rg<space>
+nnoremap <Leader>rw :Rg<space><C-r><C-w>
 
 "git client
 nnoremap <Leader>ta :Tig --all<CR>
