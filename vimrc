@@ -57,12 +57,8 @@ autocmd BufNewFile,BufRead  *.go set noexpandtab
 
 set autoindent
 " set default shiftwidth and softtabstop to 4
-set ts=4
-set sw=4
-
-autocmd BufNewFile,BufRead  *.sql set ts=2 sw=2
-autocmd BufNewFile,BufRead  *.js set ts=2 sw=2
-autocmd BufNewFile,BufRead  *.html set ts=2 sw=2
+set ts=2
+set sw=2
 
 " force plugins to load correctly. Turned back on below
 filetype off
@@ -75,9 +71,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'fatih/vim-go'
 
 " code completion
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'zxqfl/tabnine-vim'
 
 " navigation and search
 Plug 'ctrlpvim/ctrlp.vim'
@@ -179,6 +173,8 @@ nnoremap <Leader>tg :TigGrep<CR>
 "terminal
 set splitbelow
 tnoremap <C-\><ESC> <C-\><C-N>
+
+command! PrettyPrintJSON '<,'>!python -m json.tool
 
 " project configs
 if hostname() == "x99"
