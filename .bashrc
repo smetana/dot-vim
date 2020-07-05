@@ -43,6 +43,7 @@ alias gvim='gvim --servername GVIM --remote-silent'
 alias vim='vim --servername VIM --remote-silent'
 alias e=gvim
 alias localserver="ruby -run -ehttpd . -p8000"
+alias weather="curl v2.wttr.in/Kiev"
 
 alias rgrep='grep -r --color --exclude-dir=".svn" --exclude="*.log" --exclude="*.sock" --exclude="tags" --exclude="acunote.js" --exclude-dir="public/static_content*" --exclude-dir="_build" --exclude-dir="coverage" --exclude-dir="venv" --exclude-dir="node_modules" --exclude-dir="trash"'
 #alias rg='rg -g "!*.svn" -g "!*.log" -g "!*.sock" -g "!tags" -g "!acunote.js" -g "!public/static_content*" -g "!_build/*" -g "!coverage/*" -g "!venv/*"  -g "!node_modules/*"
