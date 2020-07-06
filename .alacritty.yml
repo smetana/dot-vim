@@ -100,19 +100,19 @@
 #tabspaces: 8
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Ubuntu Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Bold
 
   # Bold font face
   #bold:
@@ -148,7 +148,7 @@
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -183,11 +183,11 @@
 #draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '0x000000'
-  #  foreground: '0xeaeaea'
+  primary:
+    background: '0x000000'
+    foreground: '0xd0d0d0'
 
     # Bright and dim foreground colors
     #
@@ -215,26 +215,26 @@
   #  background: '0x404040'
 
   # Normal colors
-  #normal:
-  #  black:   '0x000000'
-  #  red:     '0xd54e53'
-  #  green:   '0xb9ca4a'
-  #  yellow:  '0xe6c547'
-  #  blue:    '0x7aa6da'
-  #  magenta: '0xc397d8'
-  #  cyan:    '0x70c0ba'
-  #  white:   '0xeaeaea'
+  normal:
+    black:   '0x000000'
+    red:     '0xdf8787'
+    green:   '0x87d787'
+    yellow:  '0xdfaf87'
+    blue:    '0x5787ff'
+    magenta: '0xafafdf'
+    cyan:    '0x57afdf'
+    white:   '0xd0d0d0'
 
   # Bright colors
-  #bright:
-  #  black:   '0x666666'
-  #  red:     '0xff3334'
-  #  green:   '0x9ec400'
-  #  yellow:  '0xe7c547'
-  #  blue:    '0x7aa6da'
-  #  magenta: '0xb77ee0'
-  #  cyan:    '0x54ced6'
-  #  white:   '0xffffff'
+  bright:
+    black:   '0x808080'
+    red:     '0xd7afaf'
+    green:   '0xafdf87'
+    yellow:  '0xffffaf'
+    blue:    '0x87afdf'
+    magenta: '0xdfafdf'
+    cyan:    '0x87cdcd'
+    white:   '0xffffff'
 
   # Dim colors
   #
@@ -530,7 +530,7 @@
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
-#key_bindings:
+key_bindings:
   # (Windows/Linux only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
@@ -541,6 +541,7 @@
   #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+  - { key: F11,   mods: None,           action: ToggleFullscreen }
 
   # (macOS only)
   #- { key: Key0,   mods: Command,         action: ResetFontSize    }
