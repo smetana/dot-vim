@@ -1,6 +1,7 @@
 set vertical-split = no
 set line-graphics = utf-8
 set main-view = id date:default author:abbreviated commit-title:yes,graph,refs,overflow=no
+set ignore-case = smart-case
 
 bind    diff    D   !git difftool --tool=vimdiff --no-prompt %(commit)^! -- %(file)
 
