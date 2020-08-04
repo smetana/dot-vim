@@ -15,7 +15,7 @@ eval "$(rbenv init -)"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-export GOROOT=$HOME/go1.12
+export GOROOT=$HOME/go1.14
 export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/projects/go
 export PATH=$PATH:$(go env GOPATH)/bin
