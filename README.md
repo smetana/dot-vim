@@ -5,8 +5,7 @@ My vim setup. This repository does not include project-specific `.vimrc` files
 ## Installation
 ```bash
 # system dependencies
-sudo apt install python3-pip ripgrep tig xclip
-pip3 install --user pynvim
+sudo apt install ripgrep tig xclip
 
 # run vim and install plugins with
 :PlugInstall
