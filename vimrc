@@ -181,3 +181,5 @@ if hostname() == "x99"
   source ~/projects/data/.vimrc
   source ~/projects/results-eta/.vimrc
 endif
+
+set spell
