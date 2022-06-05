@@ -180,6 +180,8 @@ command! PrettyPrintJSON '<,'>!python -m json.tool
 if hostname() == "x99"
   source ~/projects/data/.vimrc
   source ~/projects/results-eta/.vimrc
+  source ~/projects/quanum/.vimrc
+  source ~/projects/650health-store/.vimrc
 endif
 
 set spell
