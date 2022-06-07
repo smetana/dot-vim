@@ -6,7 +6,7 @@ export EDITOR="vim"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-export PATH="$HOME/bin:$HOME/android-studio/bin:$HOME/.rbenv/bin:$HOME/.rbenv/libexec:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/android-studio/bin:$HOME/.rbenv/bin:$HOME/.rbenv/libexec:$PATH"
 ## Pip-installed packages
 export PATH="$HOME/.local/bin:$PATH"
 
