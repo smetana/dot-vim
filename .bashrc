@@ -6,14 +6,23 @@ export EDITOR="vim"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
-export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/android-studio/bin:$HOME/.rbenv/bin:$HOME/.rbenv/libexec:$PATH"
+#export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/android-studio/bin:$HOME/.rbenv/bin:$HOME/.rbenv/libexec:$PATH"
+export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
 ## Pip-installed packages
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 #eval "$(exenv init -)"
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+
+#FIXME force to use openssl-1.1.1g
+# ruby
+export RUBY_CONFIGURE_OPTS=--with-openssl-dir=$HOME/.openssl/openssl-1.1.1g
+# wkhtmltopdf
+export LD_LIBRARY_PATH=$HOME/.openssl/openssl-1.1.1g/lib
+# erlangs
+export KERL_CONFIGURE_OPTIONS=--with-ssl=$HOME/.openssl/openssl-1.1.1g
 
 export GOROOT=$HOME/go1.14
 export PATH=$PATH:$GOROOT/bin
