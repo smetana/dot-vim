@@ -1,0 +1,51 @@
+# This enables some keys like Ctrl-Left on Mac
+set-window-option -g xterm-keys on
+
+# Custom modifier key. Used to use screen before
+set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+set-option -sg escape-time 0
+set-option -g mouse on
+set-option -g default-terminal screen-256color
+set-window-option -g mode-keys vi
+set-option -g status-keys vi
+set-option -g history-limit 20000
+
+bind-key v split-window -h
+bind-key h split-window -v
+
+# tabs simulation
+bind-key -n C-t new-window -c '#{pane_current_path}'
+bind-key -n C-Left previous-window
+bind-key -n C-Right next-window
+bind-key -n C-S-Left swap-window -t -1 \; previous-window
+bind-key -n C-S-Right swap-window -t +1 \; next-window
+
+# Reload tmux config
+bind-key r source-file ~/.tmux.conf.mac
+
+# Appearance
+set-option -g pane-border-style fg=colour241,bg=default
+set-option -g pane-active-border-style fg=colour245,bg=default
+
+# statusbar
+set-window-option -g automatic-rename on
+set-option -g status-position top
+set-option -g set-titles on
+set-option -g status-bg colour234
+set-option -g status-fg colour249
+set-option -g status-right '#{?client_prefix,#[fg=colour231]*#[fg=colour249],} [#S] %H:%M'
+set-option -g status-left ''
+set-window-option -g window-status-format ' #I:#W#F'
+set-window-option -g window-status-current-format ' #[fg=colour231]#I:#W#F'
+
+# Cppy to X clipboard
+set-option -s set-clipboard off
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-no-clear "xclip -selection clipboard -i"
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -sel clip -i"
+bind-key -T copy-mode-vi Home send -X start-of-line
+bind-key -T copy-mode-vi End send -X end-of-line

@@ -1,0 +1,12 @@
+# Enable homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Swap ~ and § keys
+hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+
+export CLICOLOR=1
+
+# suppress annoying default shell warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+clear
