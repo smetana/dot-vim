@@ -34,7 +34,12 @@ set ignorecase " case insensitive search
 " clear search highlight on redraw screen
 nnoremap <C-L> :nohl<CR><C-L>
 
-set clipboard=unnamedplus " use global clipboard
+" use global clipboard
+if has('mac')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+end
 " but don't put there deletions. Put them into far away clipboard
 nnoremap d "xd
 vnoremap d "xd
