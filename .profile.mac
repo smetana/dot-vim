@@ -10,3 +10,5 @@ export CLICOLOR=1
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 clear
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
