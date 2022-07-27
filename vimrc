@@ -28,6 +28,7 @@ if &term =~ '^screen'
   set ttymouse=xterm2
 endif
 
+set shortmess-=S " show count of search matches (since 8.1.1270)
 set incsearch " do incremental search
 set hlsearch " highlight all search matches
 set ignorecase " case insensitive search
