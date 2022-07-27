@@ -60,4 +60,6 @@ alias rgrep='grep -r --color --exclude-dir=".svn" --exclude="*.log" --exclude="*
 alias diff2ps="enscript -2 --highlight=diffu --landscape --line-numbers --continuous-page-numbers --output=diff.ps"
 alias my-puppet-server='puppet master --verbose --no-daemonize --certname 127.0.0.1'
 
+alias snowsql="/home/smetana/.snowsql/1.2.22/snowsql"
+
 source ~/.bashrc_env
