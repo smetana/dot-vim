@@ -24,11 +24,14 @@ export LD_LIBRARY_PATH=$HOME/.openssl/openssl-1.1.1g/lib
 # erlangs
 export KERL_CONFIGURE_OPTIONS=--with-ssl=$HOME/.openssl/openssl-1.1.1g
 
-export GOROOT=$HOME/go1.14
-export PATH=$PATH:$GOROOT/bin
-export GOPATH=$HOME/projects/go
-export PATH=$PATH:$(go env GOPATH)/bin
-export GO111MODULE=on
+# older libbost for labtest
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib
+
+#export GOROOT=$HOME/go1.14
+#export PATH=$PATH:$GOROOT/bin
+#export GOPATH=$HOME/projects/go
+#export PATH=$PATH:$(go env GOPATH)/bin
+#export GO111MODULE=on
 #export GOFLAGS=-mod=vendor
 
 unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"

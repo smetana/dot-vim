@@ -180,7 +180,7 @@ nnoremap <Leader>tg :TigGrep<CR>
 set splitbelow
 tnoremap <C-\><ESC> <C-\><C-N>
 
-command! PrettyPrintJSON '<,'>!python -m json.tool
+command! PrettyPrintJSON '<,'>!python2 -m json.tool
 
 " project configs
 if hostname() == "x99"
