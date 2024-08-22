@@ -1,8 +1,31 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 # Enable homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# asdf
+# arm64 version
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# postgres
+export PATH="/Users/smetana/bin:/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"
+# use TCP connection to docker postgres instance
+export PGHOST=localhost
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Users/smetana/Applications/SnowSQL.app/Contents/MacOS:$PATH
+
+export PATH="/Users/smetana/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
+export PATH="/Users/smetana/.local/lib/aws/bin:$PATH"
+
+#The following is for rubies built in Rosetta. Most likely you don't need it
+#RUBY_CFLAGS=-DUSE_FFI_CLOSURE_ALLOC
+#RUBY_CONFIGURE_OPTS=--with-readline-dir="/usr/local/opt/readline --with-openssl-dir=/usr/local/opt/openssl@1.1"
+
 # Swap ~ and § keys
-hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
+# hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000064},{"HIDKeyboardModifierMappingSrc":0x700000064,"HIDKeyboardModifierMappingDst":0x700000035}]}'
 
 export CLICOLOR=1
 
@@ -11,8 +34,54 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 clear
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
-if [ -f ~/.vim/.git-completion.bash ]; then
-  . ~/.vim/.git-completion.bash
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+if [ -f ~/.config/.git-completion.bash ]; then
+  . ~/.config/.git-completion.bash
 fi
+
+#eval "$(heroku autocomplete:script bash)"
+
+## unlimited history
+# save history to ~/.bash_history as soon as command is run
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+# osx doesn't seem to respect =-1 or = options
+export HISTSIZE=9999999999
+export HISTFILESIZE=999999999
+# osx doesn't actually respect this and it'll fall back to unix timestamp (which we want)
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+export PAGER="less"
+export EDITOR="vim"
+
+unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"
+hostC='\h'; hostC="\[\e[1;38;5;141m\]$hostC\[\e[0m\]"
+pathC='\w'; pathC="\[\e[1;38;5;229m\]$pathC\[\e[0m\]"
+timeC='\t'; timeC="\[\e[1;38;5;240;48;5;0m\]$timeC\[\e[0m\]"
+
+if [ `id -un` != 'root' ]; then
+  sep1="\[\e[1;37m\]@\[\e[0m\]"
+ else
+  sep1="\[\e[1;31m\]\#\[\e[0m\]"
+fi
+
+export PS1="$timeC $unamC$sep1$hostC:$pathC>"
+
+#aliases
+
+alias lynx='lynx -nopause'
+alias less='less -R'
+alias vim='nvr --remote-silent'
+alias localserver="ruby -run -ehttpd . -p8000"
+alias weather="curl v2.wttr.in/Kiev"
+
+alias rgrep='grep -r --color --exclude-dir=".svn" --exclude="*.log" --exclude="*.sock" --exclude="tags" --exclude="acunote.js" --exclude-dir="public/static_content*" --exclude-dir="_build" --exclude-dir="coverage" --exclude-dir=".git" --exclude-dir="venv" --exclude-dir=".bundle" --exclude-dir="node_modules" --exclude-dir="trash"'
+#alias rg='rg -g "!*.svn" -g "!*.log" -g "!*.sock" -g "!tags" -g "!acunote.js" -g "!public/static_content*" -g "!_build/*" -g "!coverage/*" -g "!venv/*"  -g "!node_modules/*"
+
+alias diff2ps="enscript -2 --highlight=diffu --landscape --line-numbers --continuous-page-numbers --output=diff.ps"
+alias my-puppet-server='puppet master --verbose --no-daemonize --certname 127.0.0.1'
+
+alias snowsql="/Users/smetana/.snowsql/1.2.22/snowsql"
+
+source ~/.bashrc_env
