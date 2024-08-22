@@ -19,8 +19,14 @@ if [ -f ~/.config/.git-completion.bash ]; then
   . ~/.config/.git-completion.bash
 fi
 
+
+GPG_TTY=$(tty)
+export GPG_TTY
+eval $(gpg-agent --daemon)
+gpg-connect-agent reloadagent /bye
+
 unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"
-hostC='\h'; hostC="\[\e[1;38;5;141m\]$hostC\[\e[0m\]"
+hostC='\h'; hostC="\[\e[1;38;5;115m\]$hostC\[\e[0m\]"
 pathC='\w'; pathC="\[\e[1;38;5;229m\]$pathC\[\e[0m\]"
 timeC='\t'; timeC="\[\e[1;38;5;240;48;5;0m\]$timeC\[\e[0m\]"
 
