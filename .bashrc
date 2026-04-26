@@ -34,15 +34,30 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.local/lib
 #export GO111MODULE=on
 #export GOFLAGS=-mod=vendor
 
-unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"
-hostC='\h'; hostC="\[\e[1;38;5;180m\]$hostC\[\e[0m\]"
-pathC='\w'; pathC="\[\e[1;38;5;229m\]$pathC\[\e[0m\]"
-timeC='\t'; timeC="\[\e[1;38;5;240;48;5;0m\]$timeC\[\e[0m\]"
+if [[ $TERM_BACKGROUND = "light" ]]; then
+   unamC='\u'; unamC="\[\e[1;38;5;20m\]$unamC\[\e[0m\]"
+   hostC='\h'; hostC="\[\e[1;38;5;28m\]$hostC\[\e[0m\]"
+   pathC='\w'; pathC="\[\e[1;38;5;166m\]$pathC\[\e[0m\]"
+   timeC='\t'; timeC="\[\e[1;38;5;242m\]$timeC\[\e[0m\]"
 
-if [ `id -un` != 'root' ]; then
-  sep1="\[\e[1;37m\]@\[\e[0m\]"
- else
-  sep1="\[\e[1;31m\]\#\[\e[0m\]"
+   if [ `id -un` != 'root' ]; then
+     sep1="\[\e[1;38;5;1m\]@\[\e[0m\]"
+    else
+     sep1="\[\e[1;38;5;1m\]\#\[\e[0m\]"
+   fi
+
+   export TIGRC_USER="$HOME/.vim/.tigrc-light"
+else
+   unamC='\u'; unamC="\[\e[1;38;5;110m\]$unamC\[\e[0m\]"
+   hostC='\h'; hostC="\[\e[1;38;5;180m\]$hostC\[\e[0m\]"
+   pathC='\w'; pathC="\[\e[1;38;5;229m\]$pathC\[\e[0m\]"
+   timeC='\t'; timeC="\[\e[1;38;5;240;48;5;0m\]$timeC\[\e[0m\]"
+
+   if [ `id -un` != 'root' ]; then
+     sep1="\[\e[1;37m\]@\[\e[0m\]"
+    else
+     sep1="\[\e[1;31m\]\#\[\e[0m\]"
+   fi
 fi
 
 export PS1="$timeC $unamC$sep1$hostC:$pathC>"

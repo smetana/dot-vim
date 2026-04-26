@@ -1,0 +1,19 @@
+set vertical-split = no
+set line-graphics = utf-8
+set main-view = id date:default author:abbreviated commit-title:yes,graph,refs,overflow=no
+set ignore-case = smart-case
+
+bind    diff    D   !git difftool --tool=vimdiff --no-prompt %(commit)^! -- %(file)
+
+# COLORS
+
+color default 238 15
+color cursor 15 244
+color title-focus 238 250
+color title-blur 244 254
+color delimiter 125 default
+color id 240 default
+color author 95 default
+color date 25 default
+color line-number 94 default
+color mode 238 default

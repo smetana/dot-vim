@@ -98,7 +98,9 @@ imap <C-t> <C-R>=strftime('%H:%M:%S')<CR>
 " visualize tabs and newlines. Use "set list" to activate
 set listchars=tab:▸\ ,eol:¬
 
-if has("win32") && ! has("gui_running")
+if exists("$TERM_BACKGROUND") && $TERM_BACKGROUND ==# "light"
+  colorscheme lightning
+elseif has("win32") && ! has("gui_running")
   colorscheme xoria16win
 elseif &t_Co != 256 && ! has("gui_running")
   colorscheme xoria16
